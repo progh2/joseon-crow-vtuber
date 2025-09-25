@@ -1,0 +1,497 @@
+/* VTuber 컨테이너 스타일 */
+.vtuber-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  position: relative;
+}
+
+/* 말풍선 스타일 */
+.speech-bubble {
+  background: rgba(255, 255, 255, 0.95);
+  border: 3px solid #FF6B9D;
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  position: relative;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 15px solid #FF6B9D;
+}
+
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 12px solid rgba(255, 255, 255, 0.95);
+}
+
+.speech-bubble p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 고양이 버튜버 캐릭터 */
+.cat-vtuber {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.cat-vtuber:hover {
+  transform: scale(1.05);
+}
+
+.cat-vtuber img {
+  width: 200px;
+  height: 200px;
+  filter: drop-shadow(0 8px 25px rgba(255, 107, 157, 0.4));
+  max-width: 100%;
+}
+
+/* 춤추는 애니메이션 */
+.cat-vtuber.dancing {
+  animation: dance 2s ease-in-out infinite;
+}
+
+@keyframes dance {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-2deg) scale(1.02);
+  }
+  50% {
+    transform: translateY(-5px) rotate(0deg) scale(1.05);
+  }
+  75% {
+    transform: translateY(-10px) rotate(2deg) scale(1.02);
+  }
+}
+
+/* 아이들 상태 */
+.cat-vtuber.idle {
+  animation: idle 3s ease-in-out infinite;
+}
+
+@keyframes idle {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.01);
+  }
+}
+
+/* 컨트롤 버튼 */
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.control-btn {
+  background: linear-gradient(135deg, #FF6B9D, #FF9A9E);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
+  background: linear-gradient(135deg, #FF5A8A, #FF8A95);
+}
+
+.control-btn:active {
+  transform: translateY(0px);
+  box-shadow: 0 2px 10px rgba(255, 107, 157, 0.3);
+}
+
+.control-btn:focus {
+  outline: 3px solid rgba(255, 107, 157, 0.5);
+  outline-offset: 2px;
+}
+
+/* 상태 표시기 */
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 1rem;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.status-dot.active {
+  background: #4CAF50;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.status-dot.inactive {
+  background: #757575;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.status-indicator span {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 추가 인터랙티브 효과 */
+.cat-vtuber:active {
+  animation: bounce 0.3s ease;
+}
+
+@keyframes bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+/* 말풍선 애니메이션 */
+.speech-bubble {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 호버시 특수 효과 */
+.cat-vtuber:hover img {
+  filter: drop-shadow(0 8px 25px rgba(255, 107, 157, 0.6))
+          drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+}
+
+/* 클릭시 파티클 효과를 위한 준비 */
+.cat-vtuber::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 107, 157, 0.6) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.cat-vtuber:active::before {
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .vtuber-container {
+    padding: 1.5rem;
+    gap: 0.8rem;
+  }
+
+  .speech-bubble {
+    max-width: 250px;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .speech-bubble p {
+    font-size: 1rem;
+  }
+
+  .cat-vtuber img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .control-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+
+  .status-indicator {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .vtuber-container {
+    padding: 1rem;
+    gap: 0.6rem;
+  }
+
+  .speech-bubble {
+    max-width: 200px;
+    padding: 0.6rem 1rem;
+    border-radius: 15px;
+  }
+
+  .speech-bubble p {
+    font-size: 0.9rem;
+  }
+
+  .cat-vtuber img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .control-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+
+  .status-indicator {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .status-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .vtuber-container {
+    padding: 0.8rem;
+  }
+
+  .speech-bubble {
+    max-width: 180px;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .cat-vtuber img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .control-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
+
+/* 메시지 카운터 */
+.message-counter {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 0.25rem;
+  font-weight: normal;
+}
+
+/* 속도 조절 슬라이더 */
+.speed-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.speed-control label {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.speed-slider {
+  width: 150px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.speed-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF6B9D, #FF9A9E);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(255, 107, 157, 0.4);
+}
+
+.speed-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF6B9D, #FF9A9E);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(255, 107, 157, 0.4);
+}
+
+.speed-slider:focus {
+  outline: 2px solid rgba(255, 107, 157, 0.5);
+  outline-offset: 2px;
+}
+
+/* 키보드 도움말 */
+.keyboard-help {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.keyboard-help p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* 추가 컨트롤 버튼 스타일 */
+.control-btn.prev,
+.control-btn.next {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.control-btn.prev:hover,
+.control-btn.next:hover {
+  background: linear-gradient(135deg, #5a6fd8, #6a3093);
+}
+
+/* 터치 인터페이스 최적화 */
+@media (hover: none) and (pointer: coarse) {
+  .cat-vtuber:hover {
+    transform: none;
+  }
+
+  .control-btn:hover {
+    transform: none;
+    background: linear-gradient(135deg, #FF6B9D, #FF9A9E);
+  }
+
+  .control-btn.prev:hover,
+  .control-btn.next:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+  }
+
+  .cat-vtuber:hover img {
+    filter: drop-shadow(0 8px 25px rgba(255, 107, 157, 0.4));
+  }
+
+  .cat-vtuber,
+  .control-btn {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* 모바일 반응형 추가 */
+@media (max-width: 480px) {
+  .message-counter {
+    font-size: 0.7rem;
+  }
+
+  .speed-control {
+    gap: 0.3rem;
+  }
+
+  .speed-control label {
+    font-size: 0.8rem;
+  }
+
+  .speed-slider {
+    width: 120px;
+    height: 5px;
+  }
+
+  .speed-slider::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+  }
+
+  .speed-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+  }
+
+  .keyboard-help {
+    padding: 0.4rem;
+  }
+
+  .keyboard-help p {
+    font-size: 0.7rem;
+  }
+}

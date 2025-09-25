@@ -1,0 +1,134 @@
+<svg width="200" height="250" viewBox="0 0 200 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 조선시대 색상 그라디언트 -->
+    <linearGradient id="hanbokGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B0000;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#DC143C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B22222;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="jeogoriGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFAF0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5F5DC;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="crowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2F2F2F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1A1A1A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 배경 산 실루엣 -->
+  <path d="M0 180 Q50 160 100 170 Q150 160 200 180 L200 250 L0 250 Z" fill="#4A5568" opacity="0.3"/>
+
+  <!-- 그림자 -->
+  <ellipse cx="100" cy="245" rx="50" ry="6" fill="#000" opacity="0.2"/>
+
+  <!-- 치마 (한복 스타일) -->
+  <path d="M60 160 Q100 150 140 160 Q145 190 140 220 Q100 230 60 220 Q55 190 60 160" fill="url(#hanbokGradient)" stroke="#8B0000" stroke-width="2"/>
+
+  <!-- 치마 주름 -->
+  <path d="M70 170 Q80 165 90 170 Q100 165 110 170 Q120 165 130 170" stroke="#8B0000" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M70 185 Q80 180 90 185 Q100 180 110 185 Q120 180 130 185" stroke="#8B0000" stroke-width="1" fill="none" opacity="0.5"/>
+
+  <!-- 저고리 (한복 상의) -->
+  <path d="M75 120 Q100 115 125 120 Q130 140 125 155 Q100 160 75 155 Q70 140 75 120" fill="url(#jeogoriGradient)" stroke="#DDD" stroke-width="1"/>
+
+  <!-- 저고리 고름 (한복 끈) -->
+  <ellipse cx="85" cy="135" rx="12" ry="4" fill="#DC143C"/>
+  <path d="M73 135 Q68 132 70 129 Q73 132 73 135" fill="#DC143C"/>
+  <path d="M97 135 Q102 132 100 129 Q97 132 97 135" fill="#DC143C"/>
+
+  <!-- 목 -->
+  <ellipse cx="100" cy="108" rx="8" ry="10" fill="#FFEFD5" stroke="#DDD" stroke-width="1"/>
+
+  <!-- 머리 (인간형) -->
+  <ellipse cx="100" cy="75" rx="28" ry="32" fill="#FFEFD5" stroke="#DDD" stroke-width="1"/>
+
+  <!-- 전통 머리 (쪽진 머리) -->
+  <ellipse cx="100" cy="55" rx="25" ry="18" fill="url(#crowGradient)" stroke="#000" stroke-width="1"/>
+  <ellipse cx="100" cy="58" rx="22" ry="15" fill="#1A1A1A"/>
+
+  <!-- 머리핀 (비녀) -->
+  <rect x="98" y="45" width="4" height="20" fill="#FFD700" stroke="#FFA500" stroke-width="0.5"/>
+  <ellipse cx="100" cy="43" rx="3" ry="2" fill="#FFD700"/>
+
+  <!-- 까마귀 특징 - 부리 -->
+  <path d="M100 80 L95 85 L100 87 L105 85 Z" fill="#333" stroke="#000" stroke-width="1"/>
+
+  <!-- 까마귀 눈 (날카롭고 지적인) -->
+  <ellipse cx="90" cy="72" rx="8" ry="10" fill="#000"/>
+  <ellipse cx="110" cy="72" rx="8" ry="10" fill="#000"/>
+
+  <!-- 눈 하이라이트 -->
+  <circle cx="92" cy="70" r="2" fill="#FF4500"/>
+  <circle cx="112" cy="70" r="2" fill="#FF4500"/>
+  <circle cx="93" cy="69" r="1" fill="white"/>
+  <circle cx="113" cy="69" r="1" fill="white"/>
+
+  <!-- 까마귀 날개 (팔 대신) -->
+  <ellipse cx="70" cy="130" rx="15" ry="25" fill="url(#crowGradient)" stroke="#000" stroke-width="1" transform="rotate(-20 70 130)"/>
+  <ellipse cx="130" cy="130" rx="15" ry="25" fill="url(#crowGradient)" stroke="#000" stroke-width="1" transform="rotate(20 130 130)"/>
+
+  <!-- 날개 깃털 디테일 -->
+  <path d="M65 120 Q70 115 75 120 Q70 125 65 130" stroke="#333" stroke-width="1" fill="none"/>
+  <path d="M125 120 Q130 115 135 120 Q130 125 135 130" stroke="#333" stroke-width="1" fill="none"/>
+
+  <!-- 까마귀 발 (발톱) -->
+  <ellipse cx="90" cy="225" rx="6" ry="4" fill="#333" stroke="#000" stroke-width="1"/>
+  <ellipse cx="110" cy="225" rx="6" ry="4" fill="#333" stroke="#000" stroke-width="1"/>
+
+  <!-- 발톱 디테일 -->
+  <path d="M87 227 L85 230 M90 227 L88 230 M93 227 L95 230" stroke="#000" stroke-width="2"/>
+  <path d="M107 227 L105 230 M110 227 L108 230 M113 227 L115 230" stroke="#000" stroke-width="2"/>
+
+  <!-- 헤드셋 (전통 + 현대 융합) -->
+  <ellipse cx="100" cy="50" rx="35" ry="3" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <circle cx="75" cy="50" r="8" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <circle cx="125" cy="50" r="8" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  <circle cx="75" cy="50" r="5" fill="#FFD700"/>
+  <circle cx="125" cy="50" r="5" fill="#FFD700"/>
+
+  <!-- 전통 문양 -->
+  <g opacity="0.7">
+    <circle cx="75" cy="50" r="2" fill="#DC143C"/>
+    <circle cx="125" cy="50" r="2" fill="#DC143C"/>
+  </g>
+
+  <!-- 마이크 (대나무 스타일) -->
+  <rect x="135" y="82" width="3" height="12" fill="#228B22" stroke="#006400" stroke-width="0.5"/>
+  <ellipse cx="136.5" cy="79" rx="2.5" ry="2" fill="#8B4513" stroke="#654321" stroke-width="0.5"/>
+
+  <!-- 전통 구름 문양 -->
+  <g opacity="0.4">
+    <path d="M30 100 Q35 95 40 100 Q45 95 50 100 Q45 105 40 100 Q35 105 30 100" fill="#87CEEB"/>
+    <path d="M150 120 Q155 115 160 120 Q165 115 170 120 Q165 125 160 120 Q155 125 150 120" fill="#87CEEB"/>
+  </g>
+
+  <!-- 조선시대 매화꽃 장식 -->
+  <g opacity="0.6">
+    <circle cx="60" cy="80" r="3" fill="#FFB6C1" stroke="#FF69B4" stroke-width="0.5"/>
+    <circle cx="58" cy="78" r="1" fill="#FFC0CB"/>
+    <circle cx="62" cy="78" r="1" fill="#FFC0CB"/>
+    <circle cx="60" cy="82" r="1" fill="#FFC0CB"/>
+    <circle cx="58" cy="82" r="1" fill="#FFC0CB"/>
+    <circle cx="62" cy="82" r="1" fill="#FFC0CB"/>
+  </g>
+
+  <!-- 한글 문양 장식 -->
+  <g opacity="0.3">
+    <path d="M140 90 Q145 85 150 90" stroke="#8B4513" stroke-width="2" fill="none"/>
+    <circle cx="145" cy="88" r="1" fill="#8B4513"/>
+  </g>
+
+  <!-- 까마귀 꼬리 깃털 -->
+  <path d="M100 220 Q90 240 95 245 Q100 235 105 245 Q110 240 100 220" fill="url(#crowGradient)" stroke="#000" stroke-width="1"/>
+
+  <!-- 전통 색동 장식 (저고리에) -->
+  <rect x="90" y="125" width="20" height="3" fill="#DC143C"/>
+  <rect x="90" y="128" width="20" height="3" fill="#FFD700"/>
+  <rect x="90" y="131" width="20" height="3" fill="#4169E1"/>
+
+  <!-- 산 배경 디테일 -->
+  <path d="M20 170 Q40 160 60 165" stroke="#6B7280" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M140 165 Q160 160 180 170" stroke="#6B7280" stroke-width="1" fill="none" opacity="0.5"/>
+</svg>
